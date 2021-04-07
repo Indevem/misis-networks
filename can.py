@@ -76,7 +76,6 @@ class CAN():
             node_id = random.choices(range(len(self.nodes)), self.importance)[0]
             self.add_node(node_id)
             space = (self.nodes[node_id].rect[3]-self.nodes[node_id].rect[1]) * (self.nodes[node_id].rect[2]-self.nodes[node_id].rect[0])
-            space = space
             self.importance.append(space)
             self.importance[node_id] = space
         self.add_random_pointers()
